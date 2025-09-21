@@ -4,7 +4,7 @@ Dieses Projekt schätzt einen VaR auf Tages-/Wochen-/Monatsbasis mit einem Trans
 
 ### Voraussetzungen
 
-- **Python**: 3.10–3.11 empfohlen (virtuelle Umgebung empfohlen)
+ - **Python**: Getestet mit 3.10.13; 3.10–3.11 empfohlen (virtuelle Umgebung empfohlen)
 - **OS**: macOS/Linux/Windows. Für Apple Silicon kann optional GPU-Beschleunigung mit `tensorflow-metal` genutzt werden
 - **FRED API Key**: erforderlich als Umgebungsvariable `FRED_API_KEY` (kostenlos unter [FRED API Key beantragen](https://fred.stlouisfed.org/docs/api/api_key.html))
 
