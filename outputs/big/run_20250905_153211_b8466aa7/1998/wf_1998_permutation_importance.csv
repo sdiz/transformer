@@ -1,0 +1,16 @@
+feature,pinball_degradation
+durable_orders,1.7521903e-05
+capacity_utilization,1.5860423e-05
+epu_index,1.1839904e-05
+retail_sales,4.367903e-06
+industrial_production,4.110858e-06
+housing_starts,3.6815181e-06
+returns,2.3227185e-06
+nonfarm_payrolls,-1.4994293e-07
+t10y3m_spread,-1.994893e-06
+unemployment_rate,-3.0454248e-06
+pce_price_index,-4.0354207e-06
+building_permits,-7.4123964e-06
+consumer_confidence,-1.6888604e-05
+fed_funds,-2.487842e-05
+t10y2y_spread,-3.0380674e-05

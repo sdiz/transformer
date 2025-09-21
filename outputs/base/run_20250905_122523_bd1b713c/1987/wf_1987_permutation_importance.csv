@@ -1,0 +1,14 @@
+feature,pinball_degradation
+t10y2y_spread,0.01875396
+housing_starts,0.017281696
+t10y3m_spread,0.0066180434
+fed_funds,0.005744608
+building_permits,0.005414646
+capacity_utilization,0.0019931924
+pce_price_index,0.0007499922
+nonfarm_payrolls,0.00023880973
+unemployment_rate,5.6589022e-05
+consumer_confidence,-0.00013506226
+industrial_production,-0.000340987
+returns,-0.00067652576
+epu_index,-0.0040977877

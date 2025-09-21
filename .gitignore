@@ -1,0 +1,10 @@
+archive/
+chats/
+docs/
+.venv/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+.env
+.git_backup_20250921_161142

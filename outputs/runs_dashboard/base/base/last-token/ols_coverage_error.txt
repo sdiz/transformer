@@ -1,0 +1,26 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         coverage_error   R-squared:                       0.522
+Model:                            OLS   Adj. R-squared:                  0.362
+Method:                 Least Squares   F-statistic:                     3.271
+Date:                Sat, 13 Sep 2025   Prob (F-statistic):              0.109
+Time:                        18:09:21   Log-Likelihood:                 10.803
+No. Observations:                   9   AIC:                            -15.61
+Df Residuals:                       6   BIC:                            -15.02
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -0.0485      0.084     -0.577      0.585      -0.254       0.157
+seq_length -1.119e-05      0.001     -0.014      0.989      -0.002       0.002
+z_window       0.0010      0.000      2.558      0.043    4.19e-05       0.002
+==============================================================================
+Omnibus:                        1.555   Durbin-Watson:                   1.979
+Prob(Omnibus):                  0.460   Jarque-Bera (JB):                0.684
+Skew:                           0.654   Prob(JB):                        0.711
+Kurtosis:                       2.663   Cond. No.                         505.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
