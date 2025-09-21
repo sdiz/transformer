@@ -1,6 +1,6 @@
-### Transformer-basiertes Value-at-Risk (VaR) mit Makrodaten
+### Transformer-basierter Value-at-Risk mit Makrodaten
 
-Dieses Projekt schätzt einen einseitigen VaR auf Tages-/Wochen-/Monatsbasis mit einem Transformer-Modell und Makro-/Marktdaten (FRED, S&P 500). Es enthält Skripte zum Ausführen von Baseline- und Big-Varianten, zur Aggregation der Ergebnisse und zur Erstellung einer Auswertung.
+Dieses Projekt schätzt einen VaR auf Tages-/Wochen-/Monatsbasis mit einem Transformer-Modell und Makro-/Marktdaten (FRED, S&P 500). Es enthält Skripte zum Ausführen von Baseline- und Big-Varianten, zur Aggregation der Ergebnisse und zur Erstellung einer Auswertung.
 
 ### Voraussetzungen
 
@@ -22,7 +22,6 @@ export FRED_API_KEY="<DEIN_KEY>"
 
 Hinweise:
 - Beim ersten Lauf lädt `transformer.py` Markt- und Makrodaten und cached sie unter `data/combined_*.csv`. Mit `--refresh-cache` wird der Cache neu aufgebaut.
-- Internetzugang ist erforderlich (FRED, Yahoo Finance).
 
 ### Schnellstart: Ein einzelner Run
 
@@ -46,7 +45,7 @@ Wichtige Flags (Auszug, vollständige Hilfe mit `-h`):
 
 ### Base vs. Big Modelle ausführen
 
-Es gibt zwei bequeme Runner-Skripte. Für klare Trennung der Ergebnisse wird empfohlen, das `--outdir`-Flag zu setzen, sodass Runs unter `outputs/base` bzw. `outputs/big` landen (notwendig für die Aggregation).
+Es gibt zwei Skripte. Für eine klare Trennung der Ergebnisse wird empfohlen, das `--outdir`-Flag zu setzen, sodass Runs unter `outputs/base` bzw. `outputs/big` landen (notwendig für die Aggregation).
 
 - Base (kompaktere Architektur; Defaults aus `transformer.py`):
   ```bash
@@ -60,7 +59,7 @@ Es gibt zwei bequeme Runner-Skripte. Für klare Trennung der Ergebnisse wird emp
   MAX_JOBS=1 bash run_experiments_big.sh \
     && echo "Tipp: In der Datei run_experiments_big.sh das Python-Kommando um --outdir outputs/big ergänzen."
   ```
-  Entspricht z. B. `--layers 6 --head-size 32 --num-heads 8 --ff-dim 1024`. Reduziere ggf. `--batch-size` bei Speichermangel.
+  Entspricht z. B. `--layers 6 --head-size 32 --num-heads 8 --ff-dim 1024`. 
 
 Direkt per CLI ohne Skripte:
 - Base-Beispiel:
@@ -104,7 +103,7 @@ python aggregate_runs.py \
 
 Wichtige Optionen: `--no-series`, `--no-metrics`, `--no-compare`, `--no-permutation`, `--zscore {none,summary}`.
 
-### Dashboard-Auswertung der Runs
+### Auswertung der Runs
 
 Erzeugt tabellarische Zusammenfassungen und Plots für einen Wurzelordner mit `run_*`-Unterordnern. Empfohlen: getrennt für Base/Big laufen lassen und danach optional zusammenziehen.
 
@@ -115,7 +114,7 @@ python run_analysis.py --root outputs/base --out outputs/runs_dashboard/base
 # Big auswerten
 python run_analysis.py --root outputs/big  --out outputs/runs_dashboard/big
 
-# Master-Dashboards (CSV) über alle Gruppen zusammenführen
+# Master (CSV) über alle Gruppen zusammenführen
 python aggregate_runs_dashboard.py --root outputs/runs_dashboard --out outputs/runs_dashboard
 ```
 
